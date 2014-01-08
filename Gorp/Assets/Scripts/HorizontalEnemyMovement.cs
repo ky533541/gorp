@@ -12,10 +12,10 @@ public class HorizontalEnemyMovement : MonoBehaviour {
 	private Transform currentTransform;
 
 	void Awake(){
-		leftBoundary = this.transform.position.x - 5;
-		rightBoundary = this.transform.position.x + 5;
+		leftBoundary = this.transform.position.x - 2.5f;
+		rightBoundary = this.transform.position.x + 2.5f;
 		currentTransform = this.transform;
-		movement = new Vector3 (0, 0, 0);
+		movement = new Vector3 (0f, 0f, 0f);
 		direction = 1.0f;
 	}
 
