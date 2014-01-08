@@ -23,6 +23,9 @@ public class BeamMovement : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		Destroy (this.gameObject);
+		if (col.gameObject.tag == "Enemy") {
+			Destroy (this.gameObject);
+			Destroy (col.gameObject);
+		}
 	}
 }

@@ -10,7 +10,7 @@ public class CharacterMovement : MonoBehaviour {
 	public bool jump;
 	public GameObject beam;
 
-
+	public bool canFire = true;
 	//The groundcheck variable is used as the point at which we will target
 	//when trying to determine if the player is grounded or not. 
 	//private Transform groundCheck;
@@ -41,8 +41,9 @@ public class CharacterMovement : MonoBehaviour {
 			jump = true;
 		}
 
-		if (Input.GetButtonDown ("Fire1")) {
+		if (Input.GetButtonDown ("Fire1") && canFire) {
 			Instantiate (beam, beamSpawnPoint.position, beamSpawnPoint.rotation);
+			canFire = false;
 		}
 	}
 

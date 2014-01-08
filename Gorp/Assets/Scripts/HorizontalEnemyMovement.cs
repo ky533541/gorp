@@ -33,4 +33,5 @@ public class HorizontalEnemyMovement : MonoBehaviour {
 		currentTransform.Translate (movement);
 
 	}
+	
 }
